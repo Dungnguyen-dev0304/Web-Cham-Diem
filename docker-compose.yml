@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  node_mienbac:
+    image: mysql:8.0
+    container_name: mienbac_server
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: db_mienbac
+    ports:
+      - "3311:3306" # Trạm Bắc chạy ở port 3311 (tránh đụng XAMPP)
+
+  node_miennam:
+    image: mysql:8.0
+    container_name: miennam_server
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: db_miennam
+    ports:
+      - "3322:3306" # Trạm Nam chạy ở port 3322
